@@ -172,6 +172,11 @@ class AEDepartmentsAddon(AddOn):
 
     def main(self):
 
+        # User agent
+        self.client.session.headers.update(
+            {"User-Agent": "Disclose AE Departments Add-On"}
+        )
+
         # Inputs
         self.run_name = self.data.get("run_name", "no name")
         self.max_ai_requests = self.data.get("max_ai_requests", 10)

@@ -4,7 +4,6 @@ import logging
 import time
 
 from openai import OpenAI
-import pandas as pd
 from tenacity import retry, stop_after_attempt, wait_random_exponential, RetryError
 
 from departments import get_all_department_codes, get_department_codes_from_authority
